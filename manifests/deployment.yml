@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: devopsbroapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsbroapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: devopsbroapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: devopsbroapipelinesjavascriptdocker 
+          image: briliolin.azurecr.io/devopsbroapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
